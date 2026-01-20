@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriftKoksik - Profesjonalne Usługi Kreatywne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #0A0A0A;
+            --card-bg: #1A1A1A;
+            --text-color: #E0E0E0;
+            --accent-color: #00FFFF; /* Turkusowy */
+            --accent-glow: #00FFFF80;
+            --button-success: #28a745;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        h1 { font-size: 3.5rem; text-align: center; margin-bottom: 0.5rem; }
+        h2 { font-size: 2.5rem; text-align: center; margin-top: 50px; margin-bottom: 40px; }
+        h3 { font-size: 1.8rem; margin-top: 0; }
+        
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .youtube-bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            filter: brightness(0.3) saturate(1.2);
+            pointer-events: none;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.9) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            padding: 20px;
+            text-shadow: 0 0 15px rgba(0,255,255,0.6);
+        }
+
+        /* --- Cennik --- */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,255,255,0.2);
+            border-color: var(--accent-color);
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            display: block;
+            margin: 15px 0;
+            text-shadow: 0 0 10px rgba(0,255,255,0.4);
+        }
+
+        /* --- Sekcja Instrukcji --- */
+        .instructions {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 60px 0;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .step {
+            margin-bottom: 25px;
+        }
+
+        .step-number {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .email-box {
+            display: inline-block;
+            background: #000;
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: 1px dashed var(--accent-color);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .note {
+            background: rgba(0,255,255,0.1);
+            color: var(--accent-color);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color);
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        /* --- Przycisk --- */
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 20px 60px;
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            box-shadow: 0 0 25px var(--accent-glow);
+            transition: all 0.4s ease;
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero { height: 50vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="youtube-bg-video">
+            <iframe
+                src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID?controls=0&autoplay=1&mute=1&loop=1&playlist=YOUR_YOUTUBE_VIDEO_ID&modestbranding=1&playsinline=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; encrypted-media"
+                loading="lazy"
+            ></iframe>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>DriftKoksik</h1>
+            <p>Profesjonalne Usługi Edycji Wideo, Grafiki & Rozwoju Gier Roblox</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <section class="instructions">
+            <h2>Jak zamówić usługę?</h2>
+            <div class="step">
+                <span class="step-number">1.</span> 
+                Wybierz interesującą Cię usługę z cennika poniżej.
+            </div>
+            <div class="step">
+                <span class="step-number">2.</span> 
+                Kliknij przycisk na dole strony i dokonaj płatności (pamiętaj o kwocie zgodnej z cennikiem – <strong>każdy dodatkowy napiwek jest mile widziany! (:</strong>).
+            </div>
+            <div class="step">
+                <span class="step-number">3.</span> 
+                Po opłaceniu, wyślij swoje pliki lub opis projektu na e-mail: <br>
+                <span class="email-box">DriftKoksik1@gmail.com</span>
+            </div>
+        </section>
+
+        <h2>Cennik Usług</h2>
+        
+        <div class="pricing-grid">
+            <div class="card">
+                <h3>Przerobienie Zdjęcia</h3>
+                <span class="price">20 zł</span>
+            </div>
+            <div class="card">
+                <h3>Miniaturka</h3>
+                <span class="price">10 zł</span>
+            </div>
+            <div class="card">
+                <h3>Montowanie Filmów</h3>
+                <p>Do 5 min: <b>20 zł</b></p>
+                <p>Do 10 min: <b>35 zł</b></p>
+                <p>Do 30 min: <b>60 zł</b></p>
+            </div>
+            <div class="card">
+                <h3>Tworzenie Gier</h3>
+                <p>Roblox Studio</p>
+                <span class="price">Wycena Indywidualna</span>
+                <p style="font-size: 0.8rem; opacity: 0.6;">Dla zaawansowanych projektów</p>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>⚠️ WAŻNA UWAGA DLA MONTAŻU WIDEO:</strong><br>
+            Kwota ustalana jest za całkowity czas materiału źródłowego (wszystkich plików przed obróbką), a nie za długość gotowego filmu.
+        </div>
+
+        <a href="https://tipply.pl/@driftkoksik" class="cta-button">WPŁAĆ I ZAMÓW</a>
+    </div>
+
+</body>
+</html>
