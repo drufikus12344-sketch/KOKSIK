@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriftKoksik - Profesjonalne Usługi Kreatywne</title>
+    <title>eshoply - Profesjonalne Usługi Kreatywne</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,7 +12,6 @@
             --text-color: #E0E0E0;
             --accent-color: #00FFFF; /* Turkusowy */
             --accent-glow: #00FFFF80;
-            --button-success: #28a745;
         }
 
         body {
@@ -30,12 +29,11 @@
             padding: 20px;
         }
 
-        h1, h2, h3 {
+        h2, h3 {
             font-weight: 700;
             color: var(--text-color);
         }
 
-        h1 { font-size: 3.5rem; text-align: center; margin-bottom: 0.5rem; }
         h2 { font-size: 2.5rem; text-align: center; margin-top: 50px; margin-bottom: 40px; }
         h3 { font-size: 1.8rem; margin-top: 0; }
         
@@ -76,39 +74,21 @@
             position: relative;
             z-index: 3;
             padding: 20px;
-            text-shadow: 0 0 15px rgba(0,255,255,0.6);
         }
 
-        /* --- Cennik --- */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        /* Styl dla obrazka zamiast H1 */
+        .hero-logo {
+            max-width: 500px; /* Możesz zmienić wielkość logo tutaj */
+            width: 90%;
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(0,255,255,0.6)); /* Efekt poświaty z obrazka */
+            margin-bottom: 10px;
         }
 
-        .card {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,255,255,0.2);
-            border-color: var(--accent-color);
-        }
-
-        .price {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: var(--accent-color);
-            display: block;
-            margin: 15px 0;
+        .hero-content p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--text-color);
             text-shadow: 0 0 10px rgba(0,255,255,0.4);
         }
 
@@ -123,6 +103,7 @@
 
         .step {
             margin-bottom: 25px;
+            font-size: 1.1rem;
         }
 
         .step-number {
@@ -140,6 +121,39 @@
             border: 1px dashed var(--accent-color);
             color: var(--accent-color);
             font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* --- Cennik --- */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,255,255,0.2);
+            border-color: var(--accent-color);
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            display: block;
+            margin: 15px 0;
+            text-shadow: 0 0 10px rgba(0,255,255,0.4);
         }
 
         .note {
@@ -166,16 +180,18 @@
             font-size: 1.5rem;
             box-shadow: 0 0 25px var(--accent-glow);
             transition: all 0.4s ease;
+            text-transform: uppercase;
         }
 
         .cta-button:hover {
             background: #fff;
             transform: scale(1.05);
+            box-shadow: 0 0 35px var(--accent-color);
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
             .hero { height: 50vh; }
+            .hero-logo { max-width: 300px; }
         }
     </style>
 </head>
@@ -192,7 +208,7 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>DriftKoksik</h1>
+            <img src="obraz.png" alt="eshoply" class="hero-logo">
             <p>Profesjonalne Usługi Edycji Wideo, Grafiki & Rozwoju Gier Roblox</p>
         </div>
     </section>
@@ -200,18 +216,18 @@
     <div class="container">
         
         <section class="instructions">
-            <h2>Jak zamówić usługę?</h2>
+            <h2>Jak zamówić na eshoply?</h2>
             <div class="step">
                 <span class="step-number">1.</span> 
                 Wybierz interesującą Cię usługę z cennika poniżej.
             </div>
             <div class="step">
                 <span class="step-number">2.</span> 
-                Kliknij przycisk na dole strony i dokonaj płatności (pamiętaj o kwocie zgodnej z cennikiem – <strong>każdy dodatkowy napiwek jest mile widziany! (:</strong>).
+                Dokonaj płatności klikając w przycisk na dole strony (wpłać kwotę zgodną z cennika – <strong>napiwki są bardzo mile widziane! (:</strong>).
             </div>
             <div class="step">
                 <span class="step-number">3.</span> 
-                Po opłaceniu, wyślij swoje pliki lub opis projektu na e-mail: <br>
+                Po opłaceniu, prześlij pliki do obróbki na nasz e-mail: <br>
                 <span class="email-box">DriftKoksik1@gmail.com</span>
             </div>
         </section>
@@ -246,7 +262,7 @@
             Kwota ustalana jest za całkowity czas materiału źródłowego (wszystkich plików przed obróbką), a nie za długość gotowego filmu.
         </div>
 
-        <a href="https://tipply.pl/@driftkoksik" class="cta-button">WPŁAĆ I ZAMÓW</a>
+        <a href="https://tipply.pl/@driftkoksik" class="cta-button">Wpłać i Zamów</a>
     </div>
 
 </body>
